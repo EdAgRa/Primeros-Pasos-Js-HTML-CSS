@@ -1,55 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Codificación para tildes y ñ -->
         <meta charset="utf-8">
-        <!-- La página se adapta al ancho del celular o el PC -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CULEBRITA</title>
-        <!-- Misma idea que Mokepon: el look vive en styles.css -->
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <!--
-            PANTALLA 1: inicio.
-            Igual que #seleccionar-mascota: se ve al cargar.
-            JS la oculta cuando pulsas Jugar.
-        -->
         <section id="pantalla-inicio">
             <h1 class="titulo-principal">CULEBRITA</h1>
             <h2 class="subtitulo-principal">Come, crece y no te choques</h2>
             <p class="texto-ayuda">Flechas del teclado o los botones</p>
-            <!-- Este id lo busca JS con getElementById -->
             <button id="boton-jugar">Jugar</button>
         </section>
-
-        <!--
-            PANTALLA 2: partida.
-            Igual que #seleccionar-ataque: está en el HTML desde el inicio,
-            pero JS la esconde hasta que empiece el juego.
-        -->
         <section id="pantalla-juego">
             <h1 class="titulo-principal">CULEBRITA</h1>
-
-            <!-- Marcador: JS escribe el número aquí (como las vidas) -->
             <p id="puntaje">Puntos: 0</p>
-
-            <!--
-                canvas = tablero de dibujo.
-                JS pinta la culebra y la comida en cuadritos.
-                width/height en pixeles (no en CSS) para que el dibujo no se deforme.
-            -->
             <canvas id="tablero" width="400" height="400"></canvas>
-
-            <!-- Botones de dirección: misma idea que Fuego / Agua / Tierra -->
             <div class="tarjetas-ataques">
                 <button id="boton-arriba" class="boton-ataque">Arriba</button>
                 <button id="boton-izquierda" class="boton-ataque">Izquierda</button>
                 <button id="boton-derecha" class="boton-ataque">Derecha</button>
                 <button id="boton-abajo" class="boton-ataque">Abajo</button>
             </div>
-
-            <!-- Mensaje de fin + reinicio (como #mensajes-resultado) -->
             <section id="mensajes-resultado">
                 <p id="resultado-encuentro">!!!A comer!!!</p>
                 <div id="reiniciar">
@@ -57,8 +30,6 @@
                 </div>
             </section>
         </section>
-
-        <!-- El script va al final para que existan los id cuando JS los busque -->
         <script src="./js/culebrita.js"></script>
     </body>
 </html>

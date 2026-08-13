@@ -11,7 +11,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* La selva queda pegada a la ventana, no al scroll del documento. */
     background-attachment: fixed;
     min-height: 100vh;
 }
@@ -67,9 +66,6 @@ body {
 #tablero {
     border: 3px solid black;
     border-radius: 8px;
-    /* El fondo del <canvas> debe ser transparente.
-       Si pones un color aquí, tapa la selva DETRÁS del lienzo.
-       La limpieza de cada turno la hace JS con clearRect, no este CSS. */
     background: transparent;
 }
 
